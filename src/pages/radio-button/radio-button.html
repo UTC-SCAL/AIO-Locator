@@ -1,0 +1,84 @@
+<ion-header>
+  <ion-navbar  color="lightblue" >
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Type</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="outer-content">
+
+  <form [formGroup]="langForm" (ngSubmit)="doSubmit(langform.value)">
+  <ion-list radio-group formControlName="langs" [(ngModel)]="type">
+    <ion-list-header>
+      Icon Type
+    </ion-list-header>
+
+    <ion-item>
+      <ion-label>Vehicle</ion-label>
+      <ion-radio value="Vehicle" (ionSelect)='radioChecked()' ></ion-radio>
+      <!-- checked="true" (ionSelect)='radioChecked()'-->
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Pedestrian</ion-label>
+      <ion-radio value="Pedestrian" (ionSelect)='radioChecked()'></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Bicycle</ion-label>
+      <ion-radio value = "Cyclist" (ionSelect)='radioChecked()'></ion-radio>
+    </ion-item>
+
+  </ion-list>
+  </form>
+
+  <!-- <ion-list radio-group>
+    <ion-list-header>
+      Auto-Lock
+    </ion-list-header>
+
+    <ion-item>
+      <ion-label>Enable "Never"</ion-label>
+      <ion-toggle (ionChange)="isDisabled = !isDisabled"></ion-toggle>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>1 Minute</ion-label>
+      <ion-radio></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>2 Minutes</ion-label>
+      <ion-radio checked></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>5 Minutes</ion-label>
+      <ion-radio></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Never</ion-label>
+      <ion-radio [disabled]="isDisabled"></ion-radio>
+    </ion-item>
+  </ion-list>
+
+  <ion-list radio-group>
+    <ion-list-header>
+      Silence
+    </ion-list-header>
+
+    <ion-item>
+      <ion-label>Always</ion-label>
+      <ion-radio></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Only while phone is locked</ion-label>
+      <ion-radio checked="true"></ion-radio>
+    </ion-item>
+  </ion-list> -->
+
+</ion-content>
