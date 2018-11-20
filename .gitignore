@@ -1,0 +1,7 @@
+.DS_Store
+/weights/
+/__pycache__/
+/.idea/
+*/.idea/
+AIO Locator/saved_data.json
+AIO Locator/footage
